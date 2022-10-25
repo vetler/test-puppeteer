@@ -1,0 +1,16 @@
+steps:
+  - name: 'gcr.io/cloud-builders/npm'
+    args: [ 'install' ]
+    dir: '.'
+  - name: 'gcr.io/cloud-builders/npm'
+    args: [ 'test' ]
+    dir: '.'
+  - name: 'gcr.io/cloud-builders/gcloud'
+    args: [ 'alpha', 'functions', 'deploy', 'test-puppeteer',
+            '--gen2',
+            '--trigger-http',
+            '--runtime', 'nodejs16',
+            '--region', 'europe-west1',
+            '--allow-unauthenticated'
+    ]
+    dir: '.'

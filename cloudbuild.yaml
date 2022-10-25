@@ -3,10 +3,6 @@ steps:
     entrypoint: 'npm'
     args: [ 'install' ]
     dir: '.'
-  - name: 'node'
-    entrypoint: 'npm'
-    args: [ 'test' ]
-    dir: '.'
   - name: 'gcr.io/cloud-builders/gcloud'
     args: [ 'alpha', 'functions', 'deploy', 'helloworld',
             '--gen2',

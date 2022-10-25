@@ -6,7 +6,7 @@ steps:
     args: [ 'test' ]
     dir: '.'
   - name: 'gcr.io/cloud-builders/gcloud'
-    args: [ 'alpha', 'functions', 'deploy', 'helloWorld',
+    args: [ 'alpha', 'functions', 'deploy', 'helloworld',
             '--gen2',
             '--trigger-http',
             '--runtime', 'nodejs16',

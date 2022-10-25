@@ -1,8 +1,8 @@
 steps:
-  - name: 'gcr.io/cloud-builders/npm'
+  - name: 'gcr.io/cloud-builders/npm:latest'
     args: [ 'install' ]
     dir: '.'
-  - name: 'gcr.io/cloud-builders/npm'
+  - name: 'gcr.io/cloud-builders/npm:latest'
     args: [ 'test' ]
     dir: '.'
   - name: 'gcr.io/cloud-builders/gcloud'

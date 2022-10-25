@@ -1,6 +1,7 @@
-import puppeteer from 'puppeteer';
+const puppeteer = require('puppeteer');
 
-(async () => {
-    const browser = await puppeteer.launch();
+exports.helloWorld = async (req, res) => {
+    const browser = await puppeteer.launch({headless: true});
     await browser.close();
-})();
+    res.send('Hello, World!');
+};
